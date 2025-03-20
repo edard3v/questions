@@ -1,10 +1,12 @@
 ---
 import Layout from "@layouts/Layout/Layout.astro";
 import { INDEX } from "./config";
+import QuizIsland from "./QuizIsland/QuizIsland";
 ---
 
 <Layout title={INDEX.display}>
   <main>
     <h1>Quíz</h1>
+    <QuizIsland client:load />
   </main>
 </Layout>
