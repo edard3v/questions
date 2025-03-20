@@ -1,17 +1,13 @@
 import type { JSX } from "solid-js";
-import { splitProps } from "solid-js";
 
 export default function Cross(props: JSX.SvgSVGAttributes<SVGSVGElement>) {
-  const [p, rest] = splitProps(props, ["class"]);
-
   return (
     <svg
-      {...rest}
       xmlns="http://www.w3.org/2000/svg"
       width="512"
       height="512"
       viewBox="0 0 512 512"
-      class={p.class}
+      {...props}
     >
       <path
         fill="currentColor"

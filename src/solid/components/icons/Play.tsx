@@ -1,18 +1,8 @@
 import type { JSX } from "solid-js";
-import { splitProps } from "solid-js";
 
 export default function Play(props: JSX.SvgSVGAttributes<SVGSVGElement>) {
-  const [p, rest] = splitProps(props, ["class"]);
   return (
-    <svg
-      {...rest}
-      xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      class={p.class}
-      ref={props.ref}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" {...props}>
       <g fill="none" stroke-linejoin="round">
         <path
           fill="var(--primary)"
